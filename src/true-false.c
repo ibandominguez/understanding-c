@@ -5,6 +5,7 @@ int main() {
 
   // In c, zero is falsy
   // everything else is truthy
+  char string[] = "helloworld";
   char char_a = 'a';
   int helper = 0, zero = 0, ten = 2;
   float dec = 3.012;
@@ -30,5 +31,8 @@ int main() {
 
   if (0) helper++;
   assert(helper == 5);
+
+  if (string) helper++;
+  assert(helper == 6);
 
 }
