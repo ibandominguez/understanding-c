@@ -8,6 +8,7 @@
 int func_one(int); // params type are mandatory but names are optional (int num)
 int use_glob_func();
 int error_local_var();
+void change_glob_var();
 int glob_var = 3;
 
 int main() {
@@ -18,6 +19,9 @@ int main() {
   assert(num == 0); // therefore num remains 0
   assert(func_num == 1); // but the copied incremented valued increased 1
   assert(use_glob_func() == 3); // glob_func has access to glob_var
+
+  change_glob_var();
+  assert(glob_var == 4);
 }
 
 /*
@@ -48,3 +52,11 @@ int error_local_var() {
   return main_local_var;
 }
 */
+
+/*
+  it can access variables on the scope above
+  and modify it's value
+*/
+void change_glob_var() {
+  glob_var = 4;
+}
