@@ -2,6 +2,24 @@
 #include <assert.h>
 
 /*
+  variables can be used in different ways or they can belong to different types
+
+  - auto: default behaviour
+  - extern: informs the compiler the variable is located outside the function
+    int num = 1;
+
+    int return_extern() {
+      extern int num;
+
+      return num;
+    }
+  - static: static variables will persist across the program.
+  - register: these vars are stored in the microprocessor, making them more accesible.
+  - volatile: Tells the compiler this variable can be modified umpredictable, using for
+    programs that would be affected by external sources.
+*/
+
+/*
   We can declare a proto to tell the compiler
   we will intent to define this func later on our code
 */
