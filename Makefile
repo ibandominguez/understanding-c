@@ -7,6 +7,7 @@ all:
 	gcc src/operators.c -o bin/operators
 	gcc src/true-false.c -o bin/true-false
 	gcc src/functions.c -o bin/functions
+	gcc src/arrays.c -o bin/arrays
 
 clean:
 	rm -rf bin/*
