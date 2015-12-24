@@ -10,7 +10,8 @@ int main() {
   assert(nums_length == 6);
   assert(sizeof(nums) == sizeof(int) * 6);
 
-  for (int i = 0; i < nums_length; i++) {
+  int i;
+  for (i = 0; i < nums_length; i++) {
     printf("%d\n", nums[i]);
   }
 
