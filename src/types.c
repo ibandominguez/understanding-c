@@ -35,6 +35,10 @@ int main() {
   double default_double; // usually 64 bits (8 bytes) about 12 precition digits
   long double default_long_double; // usually 128 bits (16 bytes) about 24 precition digits
 
+  // enum type
+  enum color { blue = 1, red = 2 };
+  enum color my_color = blue;
+
   assert(sizeof(default_char) == 1);
   assert(sizeof(default_int) == 2 || sizeof(default_int) == 4);
   assert(sizeof(default_short_int) == 1 || sizeof(default_short_int) == 2);
@@ -42,5 +46,6 @@ int main() {
   assert(sizeof(default_float) == 4 || sizeof(default_float) == 8);
   assert(sizeof(default_double) == 8 || sizeof(default_double) == 8);
   assert(sizeof(default_long_double) == 16);
+  assert(my_color == 1);
 
 }
