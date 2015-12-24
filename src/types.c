@@ -39,6 +39,16 @@ int main() {
   enum color { blue = 1, red = 2 };
   enum color my_color = blue;
 
+  // typedef allows to define types
+  typedef char *string;
+  string name = "helloworld";
+
+  // structs
+  struct Person {
+    char *name;
+    int age;
+  };
+
   assert(sizeof(default_char) == 1);
   assert(sizeof(default_int) == 2 || sizeof(default_int) == 4);
   assert(sizeof(default_short_int) == 1 || sizeof(default_short_int) == 2);
@@ -47,5 +57,6 @@ int main() {
   assert(sizeof(default_double) == 8 || sizeof(default_double) == 8);
   assert(sizeof(default_long_double) == 16);
   assert(my_color == 1);
+  assert(name == "helloworld");
 
 }
