@@ -1,13 +1,12 @@
 CC = gcc
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -std=c99 -Wno-unused-variable -Wunused-but-set-variable
+SRCS = $(wildcard src/*.c)
+PROG = $(patsubst %.c, %, $(SRCS))
 
-all:
-	mkdir -p bin
-	gcc src/types.c -o bin/types
-	gcc src/operators.c -o bin/operators
-	gcc src/true-false.c -o bin/true-false
-	gcc src/functions.c -o bin/functions
-	gcc src/arrays.c -o bin/arrays
+all: $(PROG)
+
+%: %.c
+	$(CC) $(CFLAGS) -o $(patsubst src/%, bin/%.o, $@) $<
 
 clean:
-	rm -rf bin/*
+	rm -f bin/*
