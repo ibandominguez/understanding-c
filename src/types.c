@@ -57,6 +57,5 @@ int main() {
   assert(sizeof(default_double) == 8 || sizeof(default_double) == 8);
   assert(sizeof(default_long_double) == 16);
   assert(my_color == 1);
-  assert(name == "helloworld");
 
 }

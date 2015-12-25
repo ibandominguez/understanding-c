@@ -15,9 +15,9 @@ int main() {
 
   // arrays and pointers
   // an array var is a pointer to its
-  // first element, if we increment it then 
+  // first element, if we increment it then
   // we will get the address of the next element and so on
-  int arr = { 1, 2 };
+  int arr[] = { 1, 2 };
   assert(arr[0] == *arr);
   assert(arr[1] == *(arr + 1));
 }
